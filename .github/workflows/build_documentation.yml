@@ -18,10 +18,10 @@ on:
 
 jobs:
   build_documentation:
-    runs-on: ubuntu-22.04
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v3
 
