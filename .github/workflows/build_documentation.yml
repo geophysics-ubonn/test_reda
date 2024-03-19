@@ -44,13 +44,13 @@ jobs:
       run: bash ./build_documentation_ci.sh
 
     - name: Setup Pages
-    uses: actions/configure-pages@v4
+      uses: actions/configure-pages@v4
     - name: Upload artifact
-    uses: actions/upload-pages-artifact@v3
-    with:
-      # Upload the html page
-      path: 'doc/_build/html/'
+      uses: actions/upload-pages-artifact@v3
+      with:
+        # Upload the html page
+        path: 'doc/_build/html/'
     - name: Deploy to GitHub Pages
-    id: deployment
-    uses: actions/deploy-pages@v4
+      id: deployment
+      uses: actions/deploy-pages@v4
 
